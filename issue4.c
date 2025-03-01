@@ -3,8 +3,8 @@
 #include <stdio.h>
 
 void sort(int a[], int b){
-    for(int i = 0; i < b; i++){
-        for(int j = 1; j < b; j++){
+    for(int i = 0; i < b-1; i++){
+        for(int j = i+1; j < b; j++){
             if(a[i] > a[j]){
                 int temp = a[i];
                 a[i] = a[j];
