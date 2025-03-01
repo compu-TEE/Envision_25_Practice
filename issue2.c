@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 int main(){
-    int even = 0;
-    for(int i = 0; i <= 20; i++){
-        even *= 2;
+    int even;
+    for(int i = 2; i <= 40; i+=2){
+        even=i;
         printf("%d\t", even);
     }
     printf("\n");
