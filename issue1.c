@@ -5,16 +5,17 @@
 #include<stdlib.h>
 
 char* reverse(char* str){
-    char* rev = (char*)malloc(sizeof(str));
     int size = strlen(str);
+    char* rev = (char*)malloc(size+1);
     for(int i=0;i<size;i++){
-        rev[i] = str[i];
+        rev[i] = str[size-i-1];
     }
+    rev[size]='\0';
     return rev;
 }
 
 int main(){
-    char* str = "Forward";
-    str = reverse(str);
-    printf("%s\n", str);
+    char str[] = "Forward";
+    char* reversedStr = reverse(str);
+    printf("%s\n", reversedStr);
 }
